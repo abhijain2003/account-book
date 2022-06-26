@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 html,
 body {
   padding: 0;
@@ -13,4 +18,47 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.item, .items {
+  margin: 5px;
+  padding: 5px;
+}
+
+.item.active,
+.item:hover {
+  color: white;
+  background: rgb(96 165 250);
+}
+
+.items.actives, .items:hover {
+  color: black;
+  border: 1px solid black;
+}
+
+.item:hover, .items:hover {
+  cursor: pointer;
+}
+
+@media print {
+  .print {
+    width: 90%;
+    margin: 20px auto 0;
+  }
+
+  .parentReciept {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .reciept {
+    width: 80%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
 }
